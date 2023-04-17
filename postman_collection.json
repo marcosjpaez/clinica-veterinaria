@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "6fadf9e6-cc7d-49e5-ba6b-0bdc91489e81",
+		"name": "4-ClinicaVeterinaria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-AgregarDuenios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"id_duenio\" : 1, \r\n     \"dni\": 12345678,\r\n     \"nombre\" : \"Bjorn\",\r\n     \"apellido\" : \"Iron Side\",\r\n     \"celular\" : \"15442356\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/duenio/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duenio",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-TraerDuenios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/duenio/traer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duenio",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-AgregarMascota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_mascota\" : 3,\r\n     \"nombre\" : \"Jade\",\r\n     \"especie\" : \"Perro\",\r\n     \"raza\":\"Caniche\",\r\n     \"color\" : \"Blanco\",\r\n     \"duenio\" : {\r\n         \"id_duenio\" : 1\r\n     }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/mascotas/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascotas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-TraerMascotas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mascotas/traer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascotas",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5-TraerCaniches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mascotas/traer-caniches",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mascotas",
+						"traer-caniches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6-TraerMascoDuenios(DTO)",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
